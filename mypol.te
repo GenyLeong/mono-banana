@@ -1,0 +1,47 @@
+
+module mypol 1.0;
+
+require {
+	type systemd_systemctl_exec_t;
+	type brltty_exec_t;
+	type vmtools_exec_t;
+	type bluetooth_exec_t;
+	type mozilla_plugin_t;
+	type kdumpctl_exec_t;
+	type abrt_watch_log_exec_t;
+	type systemd_tmpfiles_exec_t;
+	type mandb_exec_t;
+	type stunnel_exec_t;
+	type virt_qemu_ga_exec_t;
+	type udev_exec_t;
+	type winbind_helper_exec_t;
+	type systemd_notify_exec_t;
+	type cupsd_exec_t;
+	type numad_exec_t;
+	type systemd_hwdb_exec_t;
+	type svnserve_exec_t;
+	type fusermount_exec_t;
+	type systemd_passwd_agent_exec_t;
+	class file read;
+}
+
+#============= mozilla_plugin_t ==============
+allow mozilla_plugin_t abrt_watch_log_exec_t:file read;
+allow mozilla_plugin_t bluetooth_exec_t:file read;
+allow mozilla_plugin_t brltty_exec_t:file read;
+allow mozilla_plugin_t cupsd_exec_t:file read;
+allow mozilla_plugin_t fusermount_exec_t:file read;
+allow mozilla_plugin_t kdumpctl_exec_t:file read;
+allow mozilla_plugin_t mandb_exec_t:file read;
+allow mozilla_plugin_t numad_exec_t:file read;
+allow mozilla_plugin_t stunnel_exec_t:file read;
+allow mozilla_plugin_t svnserve_exec_t:file read;
+allow mozilla_plugin_t systemd_hwdb_exec_t:file read;
+allow mozilla_plugin_t systemd_notify_exec_t:file read;
+allow mozilla_plugin_t systemd_passwd_agent_exec_t:file read;
+allow mozilla_plugin_t systemd_systemctl_exec_t:file read;
+allow mozilla_plugin_t systemd_tmpfiles_exec_t:file read;
+allow mozilla_plugin_t udev_exec_t:file read;
+allow mozilla_plugin_t virt_qemu_ga_exec_t:file read;
+allow mozilla_plugin_t vmtools_exec_t:file read;
+allow mozilla_plugin_t winbind_helper_exec_t:file read;
